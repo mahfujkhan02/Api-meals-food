@@ -15,6 +15,7 @@ const displaymelas = meals =>{
          //console.log(meal)
 
          const mealDiv = document.createElement('div')
+         console.log(meal)
          mealDiv.classList.add('col')
          mealDiv.innerHTML = `
 
@@ -52,7 +53,7 @@ const loadMealDetail = (idmeal) => {
   fetch(url)
 
   .then(res => res.json())
-  then(data => displayMealDetail(data.meals[0]))
+  .then(data => displayMealDetail(data.meals[0]))
   //.then(data => console.log(data.meals[0]))
 
 }
