@@ -33,6 +33,21 @@ const displaymelas = meals =>{
 
 }
 
+const searchFood = () =>{
+
+  const searchField = document.getElementById('search-field');
+  const searchText = searchField.value;
+  loadMeals(searchText)
+
+  searchField.value = '';
+  //console.log('searching', searchText)
+  
+}
+
+
+
+
+
 loadMeals('a');
 
 
