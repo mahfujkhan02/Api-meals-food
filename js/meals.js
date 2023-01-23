@@ -9,9 +9,9 @@ const displaymelas = meals =>{
     // for(const meal of meals)
     // console.log(meal)
 
-    const mealContainer = document.getElementById('meal-container');
-   // mealContainer.innerHTML = '';
-    meals.forEach(meal => {
+       const mealContainer = document.getElementById('meal-container');
+       mealContainer.innerHTML = '';
+       meals.forEach(meal => {
          //console.log(meal)
 
          const mealDiv = document.createElement('div')
@@ -48,7 +48,7 @@ const searchFood = () =>{
 
 
 
-loadMeals('a');
+   //loadMeals('a');
 
 
 
