@@ -18,7 +18,7 @@ const displaymelas = meals =>{
          mealDiv.classList.add('col')
          mealDiv.innerHTML = `
 
-         <div class="card">
+         <div onclick = "loadMealDetail(${meal.idMeal})" class="card">
          <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
          <div class="card-body">
            <h5 class="card-title">${meal.strMeal}</h5>
@@ -44,11 +44,20 @@ const searchFood = () =>{
   
 }
 
+const loadMealDetail = (idmeal) => {
 
+  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idmeal}`
+  //console.log(url)
 
+  fetch(url)
 
+  .then(res => res.json())
+  //.then(data => displayMealDetail(data.meals[0]))
+  .then(data => console.log(data.meals[0]))
 
-   //loadMeals('a');
+}
+
+   loadMeals('');
 
 
 
