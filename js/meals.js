@@ -1,5 +1,5 @@
-const loadMeals = () =>{
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=a`
+const loadMeals = (search) =>{
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`
     fetch(url)
     .then(res => res.json())
     .then(data => displaymelas(data.meals))
@@ -33,7 +33,7 @@ const displaymelas = meals =>{
 
 }
 
-loadMeals();
+loadMeals('a');
 
 
 
